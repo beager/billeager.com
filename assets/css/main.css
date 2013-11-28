@@ -501,6 +501,10 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) 
 and (orientation : portrait) { 
 
+#headerwrap {
+	min-height: 500px;
+}
+
 #headerwrap h1 {
 	font-size: 84px;
 }
