@@ -467,3 +467,46 @@ a:after {
 	padding-right: 10px;
 	padding-left: 10px;
 }
+
+.ny, .ps {
+	opacity: .7;
+	margin-top: -10px;
+	padding-top:20px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.ny {
+	background-image: url(../img/nyskyline.jpg);
+}
+
+.ps {
+	background-image: url(../img/parkslope.jpg);
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) { 
+
+#headerwrap h1 {
+	font-size: 84px;
+}
+
+#headerwrap h2 {
+	font-size: 30px;
+}
+
+}
