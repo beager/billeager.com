@@ -32,8 +32,13 @@ p {
     margin-bottom: 25px;
 }
 
-.centered {
-    text-align: center;
+strong {
+	font-weight: 400;
+}
+
+.text-container p {
+	font-size: 110%;
+	text-align: left;
 }
 
 /* Links */
