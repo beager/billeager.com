@@ -38,7 +38,7 @@ function Bio() {
               }}
             />
             <p>
-              <strong>{author}</strong> is a web technologist, engineering leader, and unprompted pontificator.
+              <strong>{author}</strong> is a web technologist, engineering leader, and reckless pontificator.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 Twitter
