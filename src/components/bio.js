@@ -38,10 +38,18 @@ function Bio() {
               }}
             />
             <p>
-              <strong>{author}</strong> is a web technologist, engineering leader, and abyss-gazer.
+              <strong>{author}</strong> is a web technologist, engineering leader, and unprompted pontificator.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 Twitter
+              </a>,
+              {` `}
+              <a href={`https://github.com/${social.github}`}>
+                GitHub
+              </a>,
+              {` `}
+              <a href={`https://linkedin.com/in/${social.linkedin}`}>
+                LinkedIn
               </a>
             </p>
           </div>
@@ -65,6 +73,8 @@ const bioQuery = graphql`
         author
         social {
           twitter
+          github
+          linkedin
         }
       }
     }
