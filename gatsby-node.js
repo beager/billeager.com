@@ -2,7 +2,14 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  createRedirect({
+    fromPath: `/ebtext/`,
+    toPath: `https://www.earthboundtext.com/`,
+    isPermanent: true,
+  })
+
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   return graphql(

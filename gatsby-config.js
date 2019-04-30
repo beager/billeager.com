@@ -82,5 +82,6 @@ module.exports = {
         id: "GTM-W776F65",
       },
     },
+    `gatsby-plugin-meta-redirect`
   ],
 }
