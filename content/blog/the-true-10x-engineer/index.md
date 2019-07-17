@@ -2,9 +2,12 @@
 title: The True 10x Engineer
 date: "2019-07-17"
 description: "Rejecting the stereotype of toxic overperformers in favor of empathic influencers."
+cover_image: "./jefferson-santos-9SoCnyQmkzI-unsplash.jpg"
 ---
 
-_[This article is a work in progress.]_
+![](./jefferson-santos-9SoCnyQmkzI-unsplash.jpg)
+
+[This article is a work in progress.]\_
 
 In the profession of software engineering, there is a legendary creature who inhabits the labyrinthine corridors of office buildings, subsisting on energy drinks and the glow of dual monitors, and avoiding interaction with other humans by any means necessary. Many tales are told of this creature's prodigious industry, and how he—always a _he_, in the lore—transcends his lowly peers by a monumental factor, putting them all to shame. I refer, of course, to the fabled _10x Engineer_.
 
