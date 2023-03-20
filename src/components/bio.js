@@ -14,7 +14,7 @@ import { rhythm } from "../utils/typography"
 function Bio() {
   return (
     <StaticQuery
-      query={bioQuery}
+      query={BioQuery}
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
@@ -59,7 +59,7 @@ function Bio() {
   )
 }
 
-const bioQuery = graphql`
+const BioQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/bill-eager.jpeg/" }) {
       childImageSharp {
