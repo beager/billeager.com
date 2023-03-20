@@ -7,7 +7,7 @@ cover_image: "./kaishain.png"
 
 ![](./kaishain.png)
 
-Within the animal kingdom, humans have a unique ability to modulate their environment, as well as their feelings toward it, to optimize their comfort, their capability, and ultimately, their survival. This trait has enabled an otherwise frail humankind to thrive in extreme places like deserts, arctic tundra, Scotland, and even low Earth orbit. These places can be harsh and extreme, but human endeavoring has tamed the climate of each, and most importantly, tamed its own perception of life on the frontier.
+Within the animal kingdom, humans have a unique ability to modulate their environment and their feelings toward it to optimize their comfort, their capability, and ultimately, their survival. This trait has enabled an otherwise frail humankind to thrive in extreme places like deserts, arctic tundra, Scotland, and even low Earth orbit. These places can be harsh and extreme, but human endeavoring has tamed the climate of each, and most importantly, tamed its own perception of life on the frontier.
 
 If you work at a startup, chances are good that a tame, comfortable physical environment is a given. The thermostat is set properly, not too hot and not too cold. You can easily adjust the light to be bright enough but never too bright. You have all the tools and resources you need to make your coffee the way you like it. In fact, sitting at a desk and working on a computer is nearly ideal in terms of comfort. Yet, the journey of a startup is one of taming intellectual frontiers. And the terrain of those frontiers is littered with extremes too—intoxicating wins and infuriating defeats, delivered in a chaotic and unrelenting stream.
 
