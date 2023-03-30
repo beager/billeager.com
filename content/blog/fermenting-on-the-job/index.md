@@ -45,7 +45,7 @@ The culture that you brew now might taste more like a light lager—clear, crisp
 
 At this point, your culture is a packaged good, and people expect a consistent product behind the label. They've also molded the way that they work around that consistent culture, and any culture drift that develops across your company can turn into significant shortfalls in productivity, velocity, and efficiency. Of course, culture affects these metrics at any company size and stage, but the stakes and impact scale up as the company does.
 
-Your culture can certainly change at this point, but it is a lot of science and a lot less art. Culture surveys, quantitative metrics related to hiring, retention, and engagement, eNPS, and the like are just some of the ways that you can apply a scientific method to determine what improvements need to be made to a culture at scale. There are entire teams and professional disciplines related to managing culture at scale. It's fine to let that sizable apparatus in at this point—just make sure that what makes it into the glass doesn't fundamentally change as a result.
+Your culture can certainly be refined at this point, but it is a lot of science and a lot less art. Culture surveys, quantitative metrics related to hiring, retention, and engagement, eNPS, and the like are just some of the ways that you can apply a scientific method to determine what enhancements need to be made to a culture at scale. There are entire teams and professional disciplines related to managing culture at scale. It's fine to let that sizable apparatus in at this point—just make sure that what makes it into the glass doesn't fundamentally change as a result.
 
 ## It's (probably) not a culture problem
 
