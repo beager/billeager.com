@@ -3,7 +3,7 @@ module.exports = {
     title: `Bill Eager`,
     author: `Bill Eager`,
     description: `A web technologist and engineering leader`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://billeager.com`,
     social: {
       twitter: `beager`,
       github: `beager`,
@@ -30,8 +30,15 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              theme: "vscode",
+            }
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
+              showCaptions: true,
               maxWidth: 590
             }
           },
@@ -43,7 +50,7 @@ module.exports = {
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`
+          `gatsby-remark-smartypants`,
         ]
       }
     },
@@ -59,8 +66,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Bill Eager`,
+        short_name: `Bill Eager`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
