@@ -24,15 +24,18 @@ function SEO({ description, lang, meta, keywords, title, coverImage }) {
         featuredImage: file(
           absolutePath: { glob: "**/content/assets/bill-eager.jpeg" }
         ) {
-          absolutePath
+          childImageSharp {
+            gatsbyImageData(layout: FIXED, width: 1200)
+            original {
+              src
+            }
+          }
         }
       }
     `
   )
 
-  console.log(featuredImage);
-
-  const metaImageUrl = coverImage ? coverImage.absolutePath : featuredImage.absolutePath;
+  const metaImageUrl = coverImage ? coverImage.childImageSharp.original.src : featuredImage.childImageSharp.original.src;
 
   const metaDescription = description || site.siteMetadata.description
 
