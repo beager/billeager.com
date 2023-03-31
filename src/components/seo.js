@@ -27,7 +27,7 @@ function SEO({ description, lang, meta, keywords, title, coverImage }) {
         ) {
           childImageSharp {
             gatsbyImageData(layout: FIXED, width: 1200)
-            original {
+            fixed {
               src
             }
           }
@@ -36,7 +36,7 @@ function SEO({ description, lang, meta, keywords, title, coverImage }) {
     `
   )
 
-  const metaImageUrl = coverImage ? coverImage.childImageSharp.original.src : featuredImage.childImageSharp.original.src;
+  const metaImageUrl = coverImage ? coverImage.childImageSharp.fixed.src : featuredImage.childImageSharp.fixed.src;
 
   const metaDescription = description || site.siteMetadata.description
 

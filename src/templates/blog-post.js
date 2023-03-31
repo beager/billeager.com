@@ -88,7 +88,7 @@ export const pageQuery = graphql`
         coverImage: cover_image {
           childImageSharp {
             gatsbyImageData(layout: FIXED, width: 1200)
-            original {
+            fixed {
               src
             }
           }
