@@ -10,8 +10,8 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(
+function SEO({ description, lang, meta, keywords, title, coverImage }) {
+  const { site, featuredImage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -21,9 +21,18 @@ function SEO({ description, lang, meta, keywords, title }) {
             author
           }
         }
+        featuredImage: file(
+          absolutePath: { glob: "**/content/assets/bill-eager.jpeg" }
+        ) {
+          absolutePath
+        }
       }
     `
   )
+
+  console.log(featuredImage);
+
+  const metaImageUrl = coverImage ? coverImage.absolutePath : featuredImage.absolutePath;
 
   const metaDescription = description || site.siteMetadata.description
 
@@ -52,8 +61,12 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: metaImageUrl,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,

@@ -12,11 +12,14 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
+    console.log(post.frontmatter);
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
+          coverImage={post.frontmatter.coverImage}
         />
         <h1>{post.frontmatter.title}</h1>
         <p
@@ -84,6 +87,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        coverImage: cover_image {
+          absolutePath
+        }
       }
     }
   }

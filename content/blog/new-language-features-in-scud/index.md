@@ -13,7 +13,7 @@ The latest [2.13a2 pre-release](http://scud-lang.lan/releases/2.13a2) of the Scu
 
 Consider the following Scud 2.12.7 code that I wrote while I should have been paying attention in today's 10AM team meeting:
 
-<pre>
+```clike
 dfn absolute<>[,,] Converged::abs concurrentFunc (impl static funcOne, impl static funcTwo)& :: is<>
     jf:any nDefn <= subproc a* (funcOne as kFuncOne) >> { eval? kFuncOne : kFuncOne.res or any(Error) }
     jf:any nDefn <= subproc b* (funcTwo as kFuncTwo) >> { eval? kFuncTwo : kFuncTwo.res or any(Error) }
@@ -24,13 +24,13 @@ dfn absolute<>[,,] Converged::abs concurrentFunc (impl static funcOne, impl stat
     coalesce nDefn[a+b**] > a* > b*
     expl return ReturnValue[as&lt;Converged::abs&gt;](&a, &b)!!
 endfn
-</pre>
+```
 
 Easy enough, right? This code is pipe-safe, computably agnostic, converges predictably, and provides enough flexibility for almost any use case you can contrive.
 
 After the meeting my tech lead came up to me and asked if I had any idea why our last four production builds failed. As you can see above, Scud removes those problems with its elegant approach to managing concurrency. But the new features in 2.13a2 make it even easier to concurrently synchronize nonconvergent or semiconvergent functions. Consider the following code that I wrote using Scud 2.13a2's new language features, while I should have been reviewing pull requests for our quarterly legacy system release this Friday:
 
-<pre>
+```clike
 dfn absolute&lt;Converged&gt;[,,] concurrentFunc (impl[] static funcList..)& :: is<>
     sync [a*.._*] resProducerFactory(&lt;?jf:any[]&gt; lmb x=>x!!) <= do!
         lmb virtual nDefn <= subproc shadow .._* (absFunc as kAbsFunc) >> { eval? kAbsFunc : kAbsFunc.res or any(Error) }
@@ -38,7 +38,7 @@ dfn absolute&lt;Converged&gt;[,,] concurrentFunc (impl[] static funcList..)& :: 
     coalesce nDefn[a*.._*] > ...funcList &
     expl return ReturnValue[as&lt;Converged&gt;[]](&&funcList)!!
 endfn
-</pre>
+```
 
 I was awestruck at the simplicity of the new language features. The addition of `lmb virtual` and coalescence destructuring makes variable size matrix refunctionalization easy. As I glanced over an email from my director about a meeting at 3pm, I began to dig into the release notes from Scud 2.13a2 to see what other neat features to expect when Scud 2.13 gets its general availability release. Consider the following:
 
@@ -55,7 +55,7 @@ I'm especially excited about `lmb evented virtual` and I'll be looking for any e
 
 One great thing about the new language features, especially concurrent function argument destructuring, is that it makes transpiling JavaScript to Scud a lot faster. Rather than having to overload concurrent function signatures, you can defer destructuring of concurrent function arguments and resolve them during the refunctionalization virtualization pipeline. This was the result of applying Scud 2.13a2's features to my JS to Scud transpiler:
 
-<pre>
+```sh
 grunt@I-Hate-Work legacy-system % scud-run ./js2scud-2.12.7.scud -R --inplace -i ./src/**/*.js -o ./src/**/*.scud
 js2scud - JavaScript to Scud 2.12.7 converter
 
@@ -87,13 +87,13 @@ Converting files .....................................
 Converted 42,677 files in 2h24m58.905s
 
 grunt@I-Hate-Work legacy-system % git checkout master && git add . && git commit -m 'wip' && git push --force
-</pre>
+```
 
 As you can see, the new language features make transpiling almost **12% faster**. As my director went on in our 3pm one-on-one meeting about team players and expectations, I couldn't help but marvel at how the improvement to my conversion script brought on by a few simple function argument destructuring optimizations exceeded every single one of _my_ expectations. "Are you listening?" my director asks. _Oh yes. I'm listening, and I hear the blazing fast glory of Scud loud and clear._
 
 There are a few other changes to the Scud runtime that are appealing in 2.13a2. Symbol deduplication has been improved, and dynamic overlays have been retooled to enable just-in-time proto-checking. How many times have you written the following:
 
-<pre>
+```clike
 impr *{} of "proto.sch" take [checkProto]
 
 expr dfn concrete<> Void entry (arg#, @arg)& :: is<>
@@ -104,7 +104,7 @@ expr dfn concrete<> Void entry (arg#, @arg)& :: is<>
     unglob glob <=*
     expl return Void!!
 endfn
-</pre>
+```
 
 Imagine never having to do that again. It's incredible how Karlhans Schmidtvelt von der Schmusselhogan and the whole Scud Language Foundation maintain their relentless dedication to making a perfect language even more beautiful. At 5PM, my director came over with someone I'd never met before and asked if I could meet in Conference Room C, undoubtedly to discuss more in depth about my proposal to rewrite our legacy monolith in Scud that I emailed to the entire engineering team at 2AM last Sunday.
 
