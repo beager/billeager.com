@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, keywords, title, coverImage }) {
             title
             description
             author
+            siteUrl
           }
         }
         featuredImage: file(
@@ -65,7 +66,7 @@ function SEO({ description, lang, meta, keywords, title, coverImage }) {
         },
         {
           property: `og:image`,
-          content: metaImageUrl,
+          content: `${site.siteMetadata.siteUrl}${metaImageUrl}`,
         },
         {
           name: `twitter:card`,
@@ -85,7 +86,7 @@ function SEO({ description, lang, meta, keywords, title, coverImage }) {
         },
         {
           property: `twitter:image`,
-          content: metaImageUrl,
+          content: `${site.siteMetadata.siteUrl}${metaImageUrl}`,
         },
       ]
         .concat(
